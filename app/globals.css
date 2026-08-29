@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-page text-body;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-card rounded-lg2 shadow-card p-5 sm:p-6;
+  }
+
+  .pill {
+    @apply inline-flex items-center whitespace-nowrap rounded-full px-3 py-1 text-[11.5px] font-extrabold;
+  }
+  .pill-pink {
+    @apply bg-[#fde4f3] text-[#c0298f];
+  }
+  .pill-orange {
+    @apply bg-[#fef1da] text-[#c2760a];
+  }
+  .pill-red {
+    @apply bg-danger-soft text-danger;
+  }
+  .pill-green {
+    @apply bg-success-soft text-success;
+  }
+  .pill-yellow {
+    @apply bg-[#fdf6d8] text-[#a3860b];
+  }
+  .pill-blue {
+    @apply bg-info-soft text-info;
+  }
+  .pill-gray {
+    @apply bg-soft text-muted;
+  }
+
+  .mini-bar-track {
+    @apply mr-2 inline-block h-1.5 w-[70px] overflow-hidden rounded-full bg-soft align-middle;
+  }
+  .mini-bar-fill {
+    @apply block h-full rounded-full bg-accent;
+  }
+
+  .btn-black {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-blackbtn px-4 py-2.5 text-[13px] font-bold text-white transition hover:opacity-90;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-4 py-2.5 text-[13px] font-bold text-strong transition hover:bg-soft;
+  }
+
+  .stat-label {
+    @apply text-[10.5px] font-bold uppercase tracking-wide text-faint;
+  }
+  .stat-value {
+    @apply text-[22px] font-extrabold text-strong;
+  }
+
+  .table-base {
+    @apply w-full min-w-[640px] border-collapse text-[13px];
+  }
+  .table-base thead th {
+    @apply border-b border-border px-3 pb-2.5 text-left text-[10.5px] font-extrabold uppercase tracking-wide text-faint;
+  }
+  .table-base tbody td {
+    @apply border-b border-border px-3 py-3.5 align-middle text-body;
+  }
+  .table-base tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  .table-base tbody tr:hover {
+    @apply bg-soft;
+  }
+}
