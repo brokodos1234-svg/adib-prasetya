@@ -143,101 +143,383 @@ export function buildBundle(raw: DashboardRaw): DashboardBundle {
 // ============================================================================
 
 export const DEFAULT_RAW: DashboardRaw = {
-  period: "Agustus 2026",
-  asOf: "2026-08-29",
-  asOfLabel: "29 Agustus 2026",
-  sourceLabel: "Plan Reduce Inventory Bayan.xlsx (sheet DASHBOARD, DAILY, Review STO, TIMELINE)",
-
-  daily: [
-    { date: "2026-08-08", soh: 40893584108, received: 854953499, issued: 729332382, stoOut: 129594177 },
-    { date: "2026-08-09", soh: 37612323910, received: 227216018, issued: 736280102, stoOut: 2797794592 },
-    { date: "2026-08-10", soh: 35426415887, received: 192509240, issued: 592945443, stoOut: 1780474543 },
-    { date: "2026-08-11", soh: 34724599024, received: 394435550, issued: 918531099, stoOut: 147478288 },
-    { date: "2026-08-12", soh: 35052156040, received: 1460758816, issued: 2274748513, stoOut: 1836515 },
-    { date: "2026-08-13", soh: 34471870975, received: 788685108, issued: 1145402462, stoOut: 534712451 },
-    { date: "2026-08-14", soh: 34210084492, received: 534223485, issued: 512964955, stoOut: 254926121 },
-    { date: "2026-08-15", soh: 33676924889, received: 389896518, issued: 426218885, stoOut: 420092378 },
-    { date: "2026-08-16", soh: 33067894800, received: 0, issued: 308270411, stoOut: 437669657 },
-    { date: "2026-08-17", soh: 33161593405, received: 70043340, issued: 213310311, stoOut: 27694000 },
-    { date: "2026-08-18", soh: 32977311673, received: 389836122, issued: 778389019, stoOut: 104754796 },
-    { date: "2026-08-19", soh: 33392141152, received: 762781943, issued: 321400565, stoOut: 40163298 },
-    { date: "2026-08-20", soh: 32422716770, received: 96942300, issued: 1057323016, stoOut: 72577871 },
-    { date: "2026-08-21", soh: 32295171559, received: 657890321, issued: 1484151189, stoOut: 0 },
-    { date: "2026-08-22", soh: 31448435543, received: 374608029, issued: 530158913, stoOut: 31512366 },
-    { date: "2026-08-23", soh: 31448435543, received: 136853040, issued: 655026031, stoOut: 60429428 },
-    { date: "2026-08-24", soh: 28400190874, received: 386497080, issued: 1371634128, stoOut: 2047054258 },
-    { date: "2026-08-25", soh: 27760288045, received: 269683760, issued: 657443728, stoOut: 6088285 },
-    { date: "2026-08-26", soh: 27074524256, received: 1166590920, issued: 1754295433, stoOut: 944192 },
-    { date: "2026-08-27", soh: 24853746843, received: 374855125, issued: 758826428, stoOut: 2151346190 },
-    { date: "2026-08-28", soh: 24749030718, received: 508939120, issued: 499152166, stoOut: 45356688 },
-    { date: "2026-08-29", soh: 24821450034, received: 374857390, issued: 195537081, stoOut: 718337 },
-  ],
-
-  statusBreakdown: [
-    { status: "CLOSE STO", label: "Close STO", count: 1674, plan: 10722857625.63, sto: 10102516361.83, color: "#0d9488" },
-    { status: "BLM PROGRESS", label: "Belum Progress", count: 635, plan: 4506523571.5, sto: 528915579.44, color: "#d97706" },
-    { status: "OPEN STO", label: "Open STO", count: 302, plan: 1183498566.62, sto: 996381808.72, color: "#e11d48" },
-  ],
-
-  categories: [
-    { name: "Slow Moving Batch 1", items: 836, plan: 6327015792.91, sto: 4353021177.81 },
-    { name: "Dead Stock Batch 1", items: 368, plan: 2838176488.05, sto: 2631760239.26 },
-    { name: "Dead Stock Batch 2", items: 268, plan: 1945715688.77, sto: 1837391842.27 },
-    { name: "Medium Moving 1", items: 236, plan: 1663820713.54, sto: 729296870.91 },
-    { name: "Early STO", items: 184, plan: 832108834.22, sto: 808728225.58 },
-    { name: "Dead Stock Batch 3", items: 173, plan: 585409015.53, sto: 267084937.81 },
-    { name: "XE900 & SDLG", items: 146, plan: 581338453, sto: 220646367.91 },
-    { name: "3MRP", items: 69, plan: 565454398.99, sto: 328068787.23 },
-    { name: "Fast Moving", items: 90, plan: 313775457.4, sto: 269895455.5 },
-    { name: "Fast Moving Item", items: 6, plan: 5438487.54, sto: 5438487.54 },
-    { name: "Lainnya", note: "Req, Backlog, Mutasi HD, dll.", items: 235, plan: 754626433.79, sto: 176481358.16 },
-  ],
-
-  sites: [
-    { name: "DC PALARAN", items: 1903, plan: 13617040538.13, sto: 9818555068.06 },
-    { name: "MBLM", items: 363, plan: 1535382773.23, sto: 995090325.29 },
-    { name: "MHU", items: 278, plan: 872913347.26, sto: 436678770.27 },
-    { name: "CDI", items: 43, plan: 350202096.06, sto: 346131151.81 },
-    { name: "COMEX MSJ", items: 15, plan: 24233385, sto: 24233385 },
-    { name: "COMEX PALARAN", items: 3, plan: 458937.56, sto: 425049.56 },
-    { name: "MSJ", items: 4, plan: 3913327.5, sto: 0 },
-    { name: "MBL", items: 1, plan: 6700000, sto: 6700000 },
-    { name: "MAS", items: 1, plan: 2035359, sto: 0 },
-  ],
-
-  deadStock: [
+  "period": "AGUSTUS 2026",
+  "asOf": "2026-08-30",
+  "asOfLabel": "30 Agustus 2026",
+  "sourceLabel": "Plan Reduce Inventory Bayan.xlsx (sheet DASHBOARD, DAILY, Review STO, TIMELINE)",
+  "daily": [
     {
-      batch: "Batch 1",
-      items: 368,
-      plan: 2838176488.05,
-      sto: 2631760239.26,
-      site: "DC PALARAN",
-      statusBreakdown: [
-        { status: "CLOSE STO", count: 335, plan: 2722386726.33, sto: 2631760239.26 },
-        { status: "BLM PROGRESS", count: 33, plan: 115789761.71, sto: 0 },
-      ],
+      "date": "2026-08-08",
+      "soh": 40893584108,
+      "received": 854953499,
+      "issued": 729332382,
+      "stoOut": 129594177
     },
     {
-      batch: "Batch 2",
-      items: 268,
-      plan: 1945715688.77,
-      sto: 1837391842.27,
-      site: "DC PALARAN",
-      statusBreakdown: [{ status: "CLOSE STO", count: 268, plan: 1945715688.77, sto: 1837391842.27 }],
+      "date": "2026-08-09",
+      "soh": 37612323910,
+      "received": 227216018,
+      "issued": 736280102,
+      "stoOut": 2797794592
     },
     {
-      batch: "Batch 3",
-      items: 173,
-      plan: 585409015.53,
-      sto: 267084937.81,
-      site: "DC PALARAN",
-      statusBreakdown: [
-        { status: "OPEN STO", count: 131, plan: 262500129.25, sto: 267084937.81 },
-        { status: "BLM PROGRESS", count: 42, plan: 322908886.29, sto: 0 },
-      ],
+      "date": "2026-08-10",
+      "soh": 35426415887,
+      "received": 192509240,
+      "issued": 592945443,
+      "stoOut": 1780474543
     },
+    {
+      "date": "2026-08-11",
+      "soh": 34724599024,
+      "received": 394435550,
+      "issued": 918531099,
+      "stoOut": 147478288
+    },
+    {
+      "date": "2026-08-12",
+      "soh": 35052156040,
+      "received": 1460758816,
+      "issued": 2274748513,
+      "stoOut": 1836515
+    },
+    {
+      "date": "2026-08-13",
+      "soh": 34471870975,
+      "received": 788685108,
+      "issued": 1145402462,
+      "stoOut": 534712451
+    },
+    {
+      "date": "2026-08-14",
+      "soh": 34210084492,
+      "received": 534223485,
+      "issued": 512964955,
+      "stoOut": 254926121
+    },
+    {
+      "date": "2026-08-15",
+      "soh": 33676924889,
+      "received": 389896518,
+      "issued": 426218885,
+      "stoOut": 420092378
+    },
+    {
+      "date": "2026-08-16",
+      "soh": 33067894800,
+      "received": 0,
+      "issued": 308270411,
+      "stoOut": 437669657
+    },
+    {
+      "date": "2026-08-17",
+      "soh": 33161593405,
+      "received": 70043340,
+      "issued": 213310311,
+      "stoOut": 27694000
+    },
+    {
+      "date": "2026-08-18",
+      "soh": 32977311673,
+      "received": 389836122,
+      "issued": 778389019,
+      "stoOut": 104754796
+    },
+    {
+      "date": "2026-08-19",
+      "soh": 33392141152,
+      "received": 762781943,
+      "issued": 321400565,
+      "stoOut": 40163298
+    },
+    {
+      "date": "2026-08-20",
+      "soh": 32422716770,
+      "received": 96942300,
+      "issued": 1057323016,
+      "stoOut": 72577871
+    },
+    {
+      "date": "2026-08-21",
+      "soh": 32295171559,
+      "received": 657890321,
+      "issued": 1484151189,
+      "stoOut": 0
+    },
+    {
+      "date": "2026-08-22",
+      "soh": 31448435543,
+      "received": 374608029,
+      "issued": 530158913,
+      "stoOut": 31512366
+    },
+    {
+      "date": "2026-08-23",
+      "soh": 31448435543,
+      "received": 136853040,
+      "issued": 655026031,
+      "stoOut": 60429428
+    },
+    {
+      "date": "2026-08-24",
+      "soh": 28400190874,
+      "received": 386497080,
+      "issued": 1371634128,
+      "stoOut": 2047054258
+    },
+    {
+      "date": "2026-08-25",
+      "soh": 27760288045,
+      "received": 269683760,
+      "issued": 657443728,
+      "stoOut": 6088285
+    },
+    {
+      "date": "2026-08-26",
+      "soh": 27074524256,
+      "received": 1166590920,
+      "issued": 1754295433,
+      "stoOut": 944192
+    },
+    {
+      "date": "2026-08-27",
+      "soh": 24853746843,
+      "received": 374855125,
+      "issued": 758826428,
+      "stoOut": 2151346190
+    },
+    {
+      "date": "2026-08-28",
+      "soh": 24749030718,
+      "received": 508939120,
+      "issued": 499152166,
+      "stoOut": 45356688
+    },
+    {
+      "date": "2026-08-29",
+      "soh": 24821450034,
+      "received": 491939410,
+      "issued": 448559066,
+      "stoOut": 116385869
+    },
+    {
+      "date": "2026-08-30",
+      "soh": 24599474810,
+      "received": 15105600,
+      "issued": 191606854,
+      "stoOut": 0
+    }
   ],
-
+  "categories": [
+    {
+      "name": "Slow Moving Batch 1",
+      "items": 836,
+      "plan": 6327015792.910638,
+      "sto": 4353021177.813639
+    },
+    {
+      "name": "Dead Stock Batch 1",
+      "items": 368,
+      "plan": 2838176488.047619,
+      "sto": 2631760239.258077
+    },
+    {
+      "name": "Dead Stock Batch 2",
+      "items": 268,
+      "plan": 1945715688.767857,
+      "sto": 1837391842.267857
+    },
+    {
+      "name": "Medium Moving 1",
+      "items": 236,
+      "plan": 1663820713.5423748,
+      "sto": 729296870.9054017
+    },
+    {
+      "name": "Early STO",
+      "items": 182,
+      "plan": 816797174.219139,
+      "sto": 793416565.5821084
+    },
+    {
+      "name": "Dead Stock Batch 3",
+      "items": 173,
+      "plan": 585409015.5312916,
+      "sto": 267084937.81224418
+    },
+    {
+      "name": "XE900 & SDLG",
+      "items": 146,
+      "plan": 581338453,
+      "sto": 220646367.91429067
+    },
+    {
+      "name": "3MRP",
+      "items": 69,
+      "plan": 565454398.991342,
+      "sto": 328068787.23073596
+    },
+    {
+      "name": "Fast Moving",
+      "items": 90,
+      "plan": 313775457.40472674,
+      "sto": 269895455.4992157
+    },
+    {
+      "name": "Backlog",
+      "items": 22,
+      "plan": 256902839.32848838,
+      "sto": 0
+    },
+    {
+      "name": "Lainnya",
+      "note": "15 kategori lain",
+      "items": 221,
+      "plan": 518473741.9967805,
+      "sto": 197231505.7031822
+    }
+  ],
+  "sites": [
+    {
+      "name": "DC PALARAN",
+      "items": 1903,
+      "plan": 13617040538.128273,
+      "sto": 9818555068.057222
+    },
+    {
+      "name": "MBLM",
+      "items": 363,
+      "plan": 1535382773.2295482,
+      "sto": 995090325.2883132
+    },
+    {
+      "name": "MHU",
+      "items": 278,
+      "plan": 872913347.2634505,
+      "sto": 436678770.27223
+    },
+    {
+      "name": "CDI",
+      "items": 43,
+      "plan": 350202096.0601661,
+      "sto": 346131151.8101661
+    },
+    {
+      "name": "COMEX MSJ",
+      "items": 15,
+      "plan": 24233385,
+      "sto": 24233385
+    },
+    {
+      "name": "MBL",
+      "items": 1,
+      "plan": 6700000,
+      "sto": 6700000
+    },
+    {
+      "name": "MSJ",
+      "items": 4,
+      "plan": 3913327.5,
+      "sto": 0
+    },
+    {
+      "name": "MAS",
+      "items": 1,
+      "plan": 2035359,
+      "sto": 0
+    },
+    {
+      "name": "COMEX PALARAN",
+      "items": 3,
+      "plan": 458937.5588235294,
+      "sto": 425049.5588235294
+    }
+  ],
+  "statusBreakdown": [
+    {
+      "status": "CLOSE STO",
+      "label": "Close STO",
+      "color": "#0d9488",
+      "count": 1674,
+      "plan": 10722857625.625153,
+      "sto": 10102516361.827448
+    },
+    {
+      "status": "BLM PROGRESS",
+      "label": "Belum Progress",
+      "color": "#d97706",
+      "count": 635,
+      "plan": 4506523571.496428,
+      "sto": 528915579.4416565
+    },
+    {
+      "status": "OPEN STO",
+      "label": "Open STO",
+      "color": "#e11d48",
+      "count": 302,
+      "plan": 1183498566.6186783,
+      "sto": 996381808.7176458
+    }
+  ],
+  "deadStock": [
+    {
+      "batch": "Batch 1",
+      "items": 368,
+      "plan": 2838176488.047619,
+      "sto": 2631760239.258077,
+      "site": "DC PALARAN",
+      "statusBreakdown": [
+        {
+          "status": "CLOSE STO",
+          "count": 335,
+          "plan": 2722386726.333333,
+          "sto": 2631760239.258077
+        },
+        {
+          "status": "BLM PROGRESS",
+          "count": 33,
+          "plan": 115789761.71428572,
+          "sto": 0
+        }
+      ]
+    },
+    {
+      "batch": "Batch 2",
+      "items": 268,
+      "plan": 1945715688.767857,
+      "sto": 1837391842.267857,
+      "site": "DC PALARAN",
+      "statusBreakdown": [
+        {
+          "status": "CLOSE STO",
+          "count": 268,
+          "plan": 1945715688.767857,
+          "sto": 1837391842.267857
+        }
+      ]
+    },
+    {
+      "batch": "Batch 3",
+      "items": 173,
+      "plan": 585409015.5312916,
+      "sto": 267084937.81224418,
+      "site": "DC PALARAN",
+      "statusBreakdown": [
+        {
+          "status": "BLM PROGRESS",
+          "count": 42,
+          "plan": 322908886.28571427,
+          "sto": 0
+        },
+        {
+          "status": "OPEN STO",
+          "count": 131,
+          "plan": 262500129.24557748,
+          "sto": 267084937.81224418
+        }
+      ]
+    }
+  ],
   timeline: [
     {
       phase: "1",
