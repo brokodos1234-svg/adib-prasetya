@@ -3,7 +3,7 @@
 //
 // SOURCE: "Plan Reduce Inventory Bayan.xlsx" — sheets DASHBOARD, DAILY,
 //         "Review STO", TIMELINE. Site Bayan, program Reduce Inventory.
-// DEFAULT SNAPSHOT PERIOD: Agustus 2026, as of 2026-08-29.
+// DEFAULT SNAPSHOT PERIOD: Agustus 2026, as of 2026-08-31.
 //
 // This file defines the *shape* of a dashboard dataset (DashboardRaw), a pure
 // function to derive every KPI/total from it (buildBundle), and the bundled
@@ -144,8 +144,8 @@ export function buildBundle(raw: DashboardRaw): DashboardBundle {
 
 export const DEFAULT_RAW: DashboardRaw = {
   "period": "AGUSTUS 2026",
-  "asOf": "2026-08-30",
-  "asOfLabel": "30 Agustus 2026",
+  "asOf": "2026-08-31",
+  "asOfLabel": "31 Agustus 2026",
   "sourceLabel": "Plan Reduce Inventory Bayan.xlsx (sheet DASHBOARD, DAILY, Review STO, TIMELINE)",
   "daily": [
     {
@@ -305,35 +305,42 @@ export const DEFAULT_RAW: DashboardRaw = {
     {
       "date": "2026-08-30",
       "soh": 24599474810,
-      "received": 15105600,
-      "issued": 191606854,
+      "received": 99575040,
+      "issued": 890379611,
+      "stoOut": 356938480
+    },
+    {
+      "date": "2026-08-31",
+      "soh": 24061305769,
+      "received": 0,
+      "issued": 253945275,
       "stoOut": 0
     }
   ],
   "categories": [
     {
       "name": "Slow Moving Batch 1",
-      "items": 836,
-      "plan": 6327015792.910638,
-      "sto": 4353021177.813639
+      "items": 838,
+      "plan": 6335383767.5661,
+      "sto": 4768812564.7740135
     },
     {
       "name": "Dead Stock Batch 1",
-      "items": 368,
-      "plan": 2838176488.047619,
-      "sto": 2631760239.258077
+      "items": 367,
+      "plan": 2830292572.333333,
+      "sto": 2633238998.008077
     },
     {
       "name": "Dead Stock Batch 2",
-      "items": 268,
+      "items": 269,
       "plan": 1945715688.767857,
-      "sto": 1837391842.267857
+      "sto": 1872540856.267857
     },
     {
       "name": "Medium Moving 1",
       "items": 236,
       "plan": 1663820713.5423748,
-      "sto": 729296870.9054017
+      "sto": 1428473011.189922
     },
     {
       "name": "Early STO",
@@ -345,25 +352,25 @@ export const DEFAULT_RAW: DashboardRaw = {
       "name": "Dead Stock Batch 3",
       "items": 173,
       "plan": 585409015.5312916,
-      "sto": 267084937.81224418
+      "sto": 293908902.09795845
     },
     {
       "name": "XE900 & SDLG",
-      "items": 146,
+      "items": 147,
       "plan": 581338453,
-      "sto": 220646367.91429067
+      "sto": 221716991.0571478
     },
     {
       "name": "3MRP",
       "items": 69,
       "plan": 565454398.991342,
-      "sto": 328068787.23073596
+      "sto": 328960346.7640693
     },
     {
       "name": "Fast Moving",
       "items": 90,
       "plan": 313775457.40472674,
-      "sto": 269895455.4992157
+      "sto": 274927780.77194303
     },
     {
       "name": "Backlog",
@@ -374,29 +381,29 @@ export const DEFAULT_RAW: DashboardRaw = {
     {
       "name": "Lainnya",
       "note": "15 kategori lain",
-      "items": 221,
-      "plan": 518473741.9967805,
-      "sto": 197231505.7031822
+      "items": 215,
+      "plan": 514577411.68670297,
+      "sto": 265771619.119783
     }
   ],
   "sites": [
     {
       "name": "DC PALARAN",
-      "items": 1903,
-      "plan": 13617040538.128273,
-      "sto": 9818555068.057222
+      "items": 1905,
+      "plan": 13617524597.06945,
+      "sto": 10996974332.337833
     },
     {
       "name": "MBLM",
-      "items": 363,
-      "plan": 1535382773.2295482,
-      "sto": 995090325.2883132
+      "items": 357,
+      "plan": 1531486442.9194708,
+      "sto": 1062611410.2382473
     },
     {
       "name": "MHU",
-      "items": 278,
+      "items": 279,
       "plan": 872913347.2634505,
-      "sto": 436678770.27223
+      "sto": 442781718.6878144
     },
     {
       "name": "CDI",
@@ -420,7 +427,7 @@ export const DEFAULT_RAW: DashboardRaw = {
       "name": "MSJ",
       "items": 4,
       "plan": 3913327.5,
-      "sto": 0
+      "sto": 1910588
     },
     {
       "name": "MAS",
@@ -440,33 +447,33 @@ export const DEFAULT_RAW: DashboardRaw = {
       "status": "CLOSE STO",
       "label": "Close STO",
       "color": "#0d9488",
-      "count": 1674,
-      "plan": 10722857625.625153,
-      "sto": 10102516361.827448
+      "count": 1703,
+      "plan": 10811813879.85183,
+      "sto": 10211662390.554127
     },
     {
       "status": "BLM PROGRESS",
       "label": "Belum Progress",
       "color": "#d97706",
-      "count": 635,
-      "plan": 4506523571.496428,
-      "sto": 528915579.4416565
+      "count": 524,
+      "plan": 3217159330.1450863,
+      "sto": 530095662.59586465
     },
     {
       "status": "OPEN STO",
       "label": "Open STO",
       "color": "#e11d48",
-      "count": 302,
-      "plan": 1183498566.6186783,
-      "sto": 996381808.7176458
+      "count": 381,
+      "plan": 2380494282.37444,
+      "sto": 2140009582.4828866
     }
   ],
   "deadStock": [
     {
       "batch": "Batch 1",
-      "items": 368,
-      "plan": 2838176488.047619,
-      "sto": 2631760239.258077,
+      "items": 367,
+      "plan": 2830292572.333333,
+      "sto": 2633238998.008077,
       "site": "DC PALARAN",
       "statusBreakdown": [
         {
@@ -477,24 +484,30 @@ export const DEFAULT_RAW: DashboardRaw = {
         },
         {
           "status": "BLM PROGRESS",
-          "count": 33,
-          "plan": 115789761.71428572,
-          "sto": 0
+          "count": 32,
+          "plan": 107905846,
+          "sto": 1478758.75
         }
       ]
     },
     {
       "batch": "Batch 2",
-      "items": 268,
+      "items": 269,
       "plan": 1945715688.767857,
-      "sto": 1837391842.267857,
+      "sto": 1872540856.267857,
       "site": "DC PALARAN",
       "statusBreakdown": [
         {
           "status": "CLOSE STO",
           "count": 268,
-          "plan": 1945715688.767857,
-          "sto": 1837391842.267857
+          "plan": 1945205364.767857,
+          "sto": 1872030532.267857
+        },
+        {
+          "status": "OPEN STO",
+          "count": 1,
+          "plan": 510324,
+          "sto": 510324
         }
       ]
     },
@@ -502,20 +515,20 @@ export const DEFAULT_RAW: DashboardRaw = {
       "batch": "Batch 3",
       "items": 173,
       "plan": 585409015.5312916,
-      "sto": 267084937.81224418,
+      "sto": 293908902.09795845,
       "site": "DC PALARAN",
       "statusBreakdown": [
         {
           "status": "BLM PROGRESS",
-          "count": 42,
-          "plan": 322908886.28571427,
+          "count": 35,
+          "plan": 296084922,
           "sto": 0
         },
         {
           "status": "OPEN STO",
-          "count": 131,
-          "plan": 262500129.24557748,
-          "sto": 267084937.81224418
+          "count": 138,
+          "plan": 289324093.5312918,
+          "sto": 293908902.09795845
         }
       ]
     }
