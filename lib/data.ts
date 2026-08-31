@@ -143,9 +143,9 @@ export function buildBundle(raw: DashboardRaw): DashboardBundle {
 // ============================================================================
 
 export const DEFAULT_RAW: DashboardRaw = {
-  "period": "AGUSTUS 2026",
-  "asOf": "2026-08-31",
-  "asOfLabel": "31 Agustus 2026",
+  "period": "AGUSTUS-SEPTEMBER 2026",
+  "asOf": "2026-09-01",
+  "asOfLabel": "1 September 2026",
   "sourceLabel": "Plan Reduce Inventory Bayan.xlsx (sheet DASHBOARD, DAILY, Review STO, TIMELINE)",
   "daily": [
     {
@@ -312,9 +312,16 @@ export const DEFAULT_RAW: DashboardRaw = {
     {
       "date": "2026-08-31",
       "soh": 24061305769,
-      "received": 0,
-      "issued": 253945275,
-      "stoOut": 0
+      "received": 46592980,
+      "issued": 848342325,
+      "stoOut": 211136000
+    },
+    {
+      "date": "2026-09-01",
+      "soh": 23938003343,
+      "received": 544187350,
+      "issued": 44106033,
+      "stoOut": 225000
     }
   ],
   "categories": [
