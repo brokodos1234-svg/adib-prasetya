@@ -3,7 +3,7 @@
 //
 // SOURCE: "Plan Reduce Inventory Bayan.xlsx" — sheets DASHBOARD, DAILY,
 //         "Review STO", TIMELINE. Site Bayan, program Reduce Inventory.
-// DEFAULT SNAPSHOT PERIOD: Agustus 2026, as of 2026-08-31.
+// DEFAULT SNAPSHOT PERIOD: Agustus-September 2026, as of 2026-09-11.
 //
 // This file defines the *shape* of a dashboard dataset (DashboardRaw), a pure
 // function to derive every KPI/total from it (buildBundle), and the bundled
@@ -139,13 +139,13 @@ export function buildBundle(raw: DashboardRaw): DashboardBundle {
 }
 
 // ============================================================================
-// DEFAULT dataset — bundled snapshot, Agustus 2026 (as of 2026-08-29).
+// DEFAULT dataset — bundled snapshot, Agustus-September 2026 (as of 2026-09-11).
 // ============================================================================
 
 export const DEFAULT_RAW: DashboardRaw = {
   "period": "AGUSTUS-SEPTEMBER 2026",
-  "asOf": "2026-09-01",
-  "asOfLabel": "1 September 2026",
+  "asOf": "2026-09-11",
+  "asOfLabel": "11 September 2026",
   "sourceLabel": "Plan Reduce Inventory Bayan.xlsx (sheet DASHBOARD, DAILY, Review STO, TIMELINE)",
   "daily": [
     {
@@ -319,9 +319,79 @@ export const DEFAULT_RAW: DashboardRaw = {
     {
       "date": "2026-09-01",
       "soh": 23938003343,
-      "received": 544187350,
-      "issued": 44106033,
-      "stoOut": 225000
+      "received": 1586062957,
+      "issued": 1364449216,
+      "stoOut": 62698474
+    },
+    {
+      "date": "2026-09-02",
+      "soh": 24432095734,
+      "received": 6256535980,
+      "issued": 389753599,
+      "stoOut": 50307683
+    },
+    {
+      "date": "2026-09-03",
+      "soh": 24203663541,
+      "received": 160802600,
+      "issued": 293331732,
+      "stoOut": 20890220
+    },
+    {
+      "date": "2026-09-04",
+      "soh": 24057067134,
+      "received": 65665320,
+      "issued": 96704047,
+      "stoOut": 96370250
+    },
+    {
+      "date": "2026-09-05",
+      "soh": 24447325373,
+      "received": 490762970,
+      "issued": 319017133,
+      "stoOut": 82410573
+    },
+    {
+      "date": "2026-09-06",
+      "soh": 28313277180,
+      "received": 4726671970,
+      "issued": 844913802,
+      "stoOut": 209965312
+    },
+    {
+      "date": "2026-09-07",
+      "soh": 24215438923,
+      "received": 39729840,
+      "issued": 3796274186,
+      "stoOut": 307074685
+    },
+    {
+      "date": "2026-09-08",
+      "soh": 23956212758,
+      "received": 244883975,
+      "issued": 293285468,
+      "stoOut": 161807667
+    },
+    {
+      "date": "2026-09-09",
+      "soh": 23597466802,
+      "received": 30211200,
+      "issued": 480251847,
+      "stoOut": 5626
+    },
+    {
+      "date": "2026-09-10",
+      "soh": 23669709131,
+      "received": 3315405240,
+      "issued": 3335312305,
+      "stoOut": 6182111
+    },
+    {
+      "date": "2026-09-11",
+      "soh": 23666276439,
+      "received": 0,
+      "issued": 15592525,
+      "stoOut": 0
     }
   ],
   "categories": [
@@ -350,10 +420,16 @@ export const DEFAULT_RAW: DashboardRaw = {
       "sto": 1428473011.189922
     },
     {
+      "name": "Collecting Hose",
+      "items": 221,
+      "plan": 1067781444.4214646,
+      "sto": 1067781444.4214646
+    },
+    {
       "name": "Early STO",
       "items": 182,
       "plan": 816797174.219139,
-      "sto": 793416565.5821084
+      "sto": 791007683.0593811
     },
     {
       "name": "Dead Stock Batch 3",
@@ -380,43 +456,43 @@ export const DEFAULT_RAW: DashboardRaw = {
       "sto": 274927780.77194303
     },
     {
-      "name": "Backlog",
-      "items": 22,
-      "plan": 256902839.32848838,
-      "sto": 0
-    },
-    {
       "name": "Lainnya",
-      "note": "15 kategori lain",
-      "items": 215,
-      "plan": 514577411.68670297,
-      "sto": 265771619.119783
+      "note": "26 kategori lain",
+      "items": 320,
+      "plan": 1325595873.3419535,
+      "sto": 1182202712.9417
     }
   ],
   "sites": [
     {
       "name": "DC PALARAN",
-      "items": 1905,
-      "plan": 13617524597.06945,
-      "sto": 10996974332.337833
+      "items": 2139,
+      "plan": 14887229810.118574,
+      "sto": 12523582384.715445
     },
     {
       "name": "MBLM",
-      "items": 357,
-      "plan": 1531486442.9194708,
-      "sto": 1062611410.2382473
+      "items": 384,
+      "plan": 1670375855.7105975,
+      "sto": 1304572348.6733131
     },
     {
       "name": "MHU",
-      "items": 279,
-      "plan": 872913347.2634505,
-      "sto": 442781718.6878144
+      "items": 300,
+      "plan": 1034102428.5680017,
+      "sto": 603970799.9923656
     },
     {
       "name": "CDI",
-      "items": 43,
-      "plan": 350202096.0601661,
-      "sto": 346131151.8101661
+      "items": 45,
+      "plan": 350932873.8101661,
+      "sto": 346861929.5601661
+    },
+    {
+      "name": "COMEX PALARAN",
+      "items": 14,
+      "plan": 32803088.76715686,
+      "sto": 32701424.76715686
     },
     {
       "name": "COMEX MSJ",
@@ -425,28 +501,22 @@ export const DEFAULT_RAW: DashboardRaw = {
       "sto": 24233385
     },
     {
-      "name": "MBL",
-      "items": 1,
-      "plan": 6700000,
-      "sto": 6700000
-    },
-    {
       "name": "MSJ",
-      "items": 4,
-      "plan": 3913327.5,
-      "sto": 1910588
+      "items": 11,
+      "plan": 17174554.23600386,
+      "sto": 15171814.73600386
     },
     {
       "name": "MAS",
-      "items": 1,
-      "plan": 2035359,
-      "sto": 0
+      "items": 3,
+      "plan": 14512562.90909091,
+      "sto": 12477203.90909091
     },
     {
-      "name": "COMEX PALARAN",
-      "items": 3,
-      "plan": 458937.5588235294,
-      "sto": 425049.5588235294
+      "name": "TDM",
+      "items": 1,
+      "plan": 0,
+      "sto": 0
     }
   ],
   "statusBreakdown": [
@@ -454,25 +524,25 @@ export const DEFAULT_RAW: DashboardRaw = {
       "status": "CLOSE STO",
       "label": "Close STO",
       "color": "#0d9488",
-      "count": 1703,
-      "plan": 10811813879.85183,
-      "sto": 10211662390.554127
+      "count": 1976,
+      "plan": 12972129398.991638,
+      "sto": 12327013443.271885
     },
     {
       "status": "BLM PROGRESS",
       "label": "Belum Progress",
       "color": "#d97706",
-      "count": 524,
-      "plan": 3217159330.1450863,
-      "sto": 530095662.59586465
+      "count": 518,
+      "plan": 3059374416.28796,
+      "sto": 742307738.0672265
     },
     {
       "status": "OPEN STO",
       "label": "Open STO",
       "color": "#e11d48",
-      "count": 381,
-      "plan": 2380494282.37444,
-      "sto": 2140009582.4828866
+      "count": 418,
+      "plan": 1999860743.8399932,
+      "sto": 1794250110.0144296
     }
   ],
   "deadStock": [
