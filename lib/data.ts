@@ -144,8 +144,8 @@ export function buildBundle(raw: DashboardRaw): DashboardBundle {
 
 export const DEFAULT_RAW: DashboardRaw = {
   "period": "AGUSTUS-SEPTEMBER 2026",
-  "asOf": "2026-09-11",
-  "asOfLabel": "11 September 2026",
+  "asOf": "2026-09-27",
+  "asOfLabel": "27 September 2026",
   "sourceLabel": "Plan Reduce Inventory Bayan.xlsx (sheet DASHBOARD, DAILY, Review STO, TIMELINE)",
   "daily": [
     {
@@ -389,9 +389,121 @@ export const DEFAULT_RAW: DashboardRaw = {
     {
       "date": "2026-09-11",
       "soh": 23666276439,
-      "received": 0,
-      "issued": 15592525,
+      "received": 1128042349,
+      "issued": 403496216,
       "stoOut": 0
+    },
+    {
+      "date": "2026-09-12",
+      "soh": 24805599380,
+      "received": 1904944710,
+      "issued": 453822264,
+      "stoOut": 35498568
+    },
+    {
+      "date": "2026-09-13",
+      "soh": 24205932564,
+      "received": 40086676,
+      "issued": 631919882,
+      "stoOut": 120958454
+    },
+    {
+      "date": "2026-09-14",
+      "soh": 20921693343,
+      "received": 8096088474,
+      "issued": 2943162324,
+      "stoOut": 1110601902
+    },
+    {
+      "date": "2026-09-15",
+      "soh": 20180766299,
+      "received": 102760619,
+      "issued": 8265397718,
+      "stoOut": 0
+    },
+    {
+      "date": "2026-09-16",
+      "soh": 19880548122,
+      "received": 5397420,
+      "issued": 584168438,
+      "stoOut": 138904057
+    },
+    {
+      "date": "2026-09-17",
+      "soh": 16736017609,
+      "received": 40260320,
+      "issued": 4636317864,
+      "stoOut": 1185355044
+    },
+    {
+      "date": "2026-09-18",
+      "soh": 15805504561,
+      "received": 486620530,
+      "issued": 1239944138,
+      "stoOut": 53768000
+    },
+    {
+      "date": "2026-09-19",
+      "soh": 17679716493,
+      "received": 2138414035,
+      "issued": 599517101,
+      "stoOut": 313954083
+    },
+    {
+      "date": "2026-09-20",
+      "soh": 17045805681,
+      "received": 166736820,
+      "issued": 757777387,
+      "stoOut": 99302193
+    },
+    {
+      "date": "2026-09-21",
+      "soh": 16438838492,
+      "received": 567146556,
+      "issued": 1157175919,
+      "stoOut": 48198936
+    },
+    {
+      "date": "2026-09-22",
+      "soh": 15774424514,
+      "received": 167567740,
+      "issued": 3120353211,
+      "stoOut": 142410562
+    },
+    {
+      "date": "2026-09-23",
+      "soh": 15097796664,
+      "received": 138404100,
+      "issued": 183200369,
+      "stoOut": 658266947
+    },
+    {
+      "date": "2026-09-24",
+      "soh": 14916150598,
+      "received": 6190874538,
+      "issued": 3170498500,
+      "stoOut": 15633049
+    },
+    {
+      "date": "2026-09-25",
+      "soh": 16967894184,
+      "received": 2324180263,
+      "issued": 1346020903,
+      "stoOut": 566911678
+    },
+    {
+      "date": "2026-09-26",
+      "soh": 16542013378,
+      "received": 9000000,
+      "issued": 478681917,
+      "stoOut": 0
+    },
+    {
+      "date": "2026-09-27",
+      "soh": 16982257489,
+      "received": 461785025,
+      "issued": 22290020,
+      "stoOut": 135288691
     }
   ],
   "categories": [
@@ -524,9 +636,9 @@ export const DEFAULT_RAW: DashboardRaw = {
       "status": "CLOSE STO",
       "label": "Close STO",
       "color": "#0d9488",
-      "count": 1976,
-      "plan": 12972129398.991638,
-      "sto": 12327013443.271885
+      "count": 2197,
+      "plan": 14039910843.413103,
+      "sto": 13394794887.69335
     },
     {
       "status": "BLM PROGRESS",
@@ -540,9 +652,9 @@ export const DEFAULT_RAW: DashboardRaw = {
       "status": "OPEN STO",
       "label": "Open STO",
       "color": "#e11d48",
-      "count": 418,
-      "plan": 1999860743.8399932,
-      "sto": 1794250110.0144296
+      "count": 197,
+      "plan": 932079299.4185288,
+      "sto": 726468665.5929649
     }
   ],
   "deadStock": [
@@ -610,40 +722,96 @@ export const DEFAULT_RAW: DashboardRaw = {
       ]
     }
   ],
-  timeline: [
+  "timeline": [
     {
-      phase: "1",
-      title: "Perencanaan & Pemetaan Aset",
-      activities: [
-        { code: "1.A", name: "List Aset Logistik", targetValue: null },
-        { code: "1.B", name: "List Schedule Maping Inventory Bayan", targetValue: null },
-        { code: "1.C", name: "Revisi dan Finalisasi Plan Eksekusi", targetValue: null },
-      ],
+      "phase": "1",
+      "title": "Perencanaan & Pemetaan Aset",
+      "activities": [
+        {
+          "code": "1.A",
+          "name": "List Aset Logistik",
+          "targetValue": null
+        },
+        {
+          "code": "1.B",
+          "name": "List Schedule Maping Inventory Bayan",
+          "targetValue": null
+        },
+        {
+          "code": "1.C",
+          "name": "Revisi dan Finalisasi Plan Eksekusi",
+          "targetValue": null
+        }
+      ]
     },
     {
-      phase: "2",
-      title: "Eksekusi",
-      activities: [
-        { code: "2.A", name: "Prepare dan STO Dead Stock Batch 1 ke DC Palaran", targetValue: 2839176938.05 },
-        { code: "2.B", name: "Prepare dan STO Dead Stock Batch 2 ke DC Palaran", targetValue: 2093208846.77 },
-        { code: "2.C", name: "Prepare & Listing Part Free Stock (Analisa GR GI 2024-2025)", targetValue: null },
-        { code: "2.D", name: "Prepare dan STO/GI Deterministic Part by Moving Unit Batch 1", targetValue: 17337954955.12 },
-        { code: "2.E", name: "Prepare dan STO Item Fast Moving Site Tujuan", targetValue: 10723736702.92 },
-        { code: "2.F", name: "Prepare dan STO LIB Site Tujuan", targetValue: 3297637412.04 },
-        { code: "2.G", name: "Prepare dan STO/GI Deterministic Part by Moving Unit Batch 2", targetValue: null },
-        { code: "2.H", name: "Prepare dan STO by Populasi Unit Site Tujuan", targetValue: null },
-        { code: "2.I", name: "Prepare dan STO Stock ke DC Palaran", targetValue: null },
-      ],
+      "phase": "2",
+      "title": "Eksekusi",
+      "activities": [
+        {
+          "code": "2.A",
+          "name": "Prepare dan STO Dead Stock Batch 1 ke DC Palaran",
+          "targetValue": 2839176938.05
+        },
+        {
+          "code": "2.B",
+          "name": "Prepare dan STO Dead Stock Batch 2 ke DC Palaran",
+          "targetValue": 2093208846.77
+        },
+        {
+          "code": "2.C",
+          "name": "Prepare & Listing Part Free Stock (Analisa GR GI 2024-2025)",
+          "targetValue": null
+        },
+        {
+          "code": "2.D",
+          "name": "Prepare dan STO/GI Deterministic Part by Moving Unit Batch 1",
+          "targetValue": 17337954955.12
+        },
+        {
+          "code": "2.E",
+          "name": "Prepare dan STO Item Fast Moving Site Tujuan",
+          "targetValue": 10723736702.92
+        },
+        {
+          "code": "2.F",
+          "name": "Prepare dan STO LIB Site Tujuan",
+          "targetValue": 3297637412.04
+        },
+        {
+          "code": "2.G",
+          "name": "Prepare dan STO/GI Deterministic Part by Moving Unit Batch 2",
+          "targetValue": null
+        },
+        {
+          "code": "2.H",
+          "name": "Prepare dan STO by Populasi Unit Site Tujuan",
+          "targetValue": null
+        },
+        {
+          "code": "2.I",
+          "name": "Prepare dan STO Stock ke DC Palaran",
+          "targetValue": null
+        }
+      ]
     },
     {
-      phase: "3",
-      title: "Evaluasi",
-      activities: [
-        { code: "3.A", name: "Analisa dan Evaluasi First Different", targetValue: null },
-        { code: "3.B", name: "Zero Inventory Bayan", targetValue: null },
-      ],
-    },
-  ],
+      "phase": "3",
+      "title": "Evaluasi",
+      "activities": [
+        {
+          "code": "3.A",
+          "name": "Analisa dan Evaluasi First Different",
+          "targetValue": null
+        },
+        {
+          "code": "3.B",
+          "name": "Zero Inventory Bayan",
+          "targetValue": null
+        }
+      ]
+    }
+  ]
 };
 
 export const DEFAULT_BUNDLE: DashboardBundle = buildBundle(DEFAULT_RAW);
